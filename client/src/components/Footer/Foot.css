@@ -1,0 +1,21 @@
+.Foot {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    background-image: linear-gradient(to right, #5a2fd0, #1830b370 );
+
+}
+
+.FootContainer {
+    padding-left: 40px;
+    padding-right: 40px;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+.NavItems {
+    color: #fff;
+}
