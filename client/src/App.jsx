@@ -13,11 +13,13 @@ import './App.css';
 // Add new components here!
 import HomePage from './components/HomePage/HomePage.tsx';
 import Projects from './components/Projects/Projects.tsx';
+import Events from './components/Events/Events.tsx';
 
 // Add new paths here!
 const router = createBrowserRouter([
   { path: "/", element: <HomePage /> },
   { path: "/projects", element: <Projects /> },
+  { path: "/events", element: <Events />},
 ]);
 
 function App() {
