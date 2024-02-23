@@ -1,0 +1,23 @@
+{
+  "projects": [
+    {
+      "name": "Club Website",
+      "description": "Our first project was this website!",
+      "tech": ["React", "TypeScript", "CSS", "HTML"],
+      "github": "https://github.com/COC-ACM-TECH-Club/clubwebsite",
+      "image": "../../../assets/Projects/Black.png"
+    },
+    {
+      "name": "Unity Game",
+      "description": "A game that one of our club members made during our Unity Pathways activities.",
+      "tech": ["Unity", "C#", "Visual Studio"],
+      "image": "../../../assets/Projects/Black.png"      
+    },
+    {
+      "name": "Project C",
+      "description": "This is the description for Project C.",
+      "tech": ["Java", "Spring", "Hibernate"],
+      "image": ""
+    }
+  ]
+}
