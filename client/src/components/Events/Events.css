@@ -1,0 +1,23 @@
+.EventsPage {
+    width: 85vw;
+    border: 2px solid rgb(212, 217, 226);
+    border-radius: 15px;
+}
+.EventTitle { 
+    color: #1D319D;
+    text-align: center;
+}
+.EventList {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5vh;
+    gap: 2vh;
+}
+.EventCard {
+    width: 95%;
+    border-radius: 100px;
+    background-color: #F8F8F8;
+    box-shadow: 0px 2px 5px 1px rgb(192, 196, 204);
+}
