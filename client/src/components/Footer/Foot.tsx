@@ -10,6 +10,10 @@ const tabs = [
     name: "Projects",
     path: "/projects",
   },
+  {
+    name: "Events",
+    path: "/events",
+  }
 ];
 
 const Foot: React.FC = () => {
