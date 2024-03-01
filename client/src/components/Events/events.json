@@ -1,0 +1,34 @@
+{
+    "events": [
+        {
+            "name": "Club Meeting",
+            "date": "February 23rd, 2024",
+            "startTime": "11:00am",
+            "endTime": "12:30pm",
+            "location": ["TLC-133", "Zoom"],
+            "link": "https://discord.gg/5UDmWx8Peu"
+        },
+        {
+            "name": "Club Meeting",
+            "date": "March 3rd, 2024",
+            "startTime": "11:00am",
+            "endTime": "12:30pm",
+            "location": ["TLC-133", "Zoom"],
+            "link": "https://discord.gg/5UDmWx8Peu"
+        },
+        {
+            "name": "Minecraft Lets Play",
+            "date": "March 4th, 2024",
+            "startTime": "3:00pm",
+            "endTime": "5:00pm",
+            "location": ["minecraft.apra.dev"]
+        },
+        {
+            "name": "Bowling Party",
+            "date": "March 8th, 2024",
+            "startTime": "6:00pm",
+            "endTime": "8:00pm",
+            "location": ["Valencia Lanes"]
+        }
+    ]
+}
