@@ -16,9 +16,9 @@ import Events from './components/Events/Events.tsx';
 
 // Add new paths here!
 const router = createBrowserRouter([
-  { path: "/", element: <HomePage /> },
-  { path: "/projects", element: <Projects /> },
-  { path: "/events", element: <Events />},
+  { path: "/COC-TECH-CLUB-Website/", element: <HomePage /> },
+  { path: "/COC-TECH-CLUB-Website/projects", element: <Projects /> },
+  { path: "/COC-TECH-CLUB-Website/events", element: <Events />},
 ]);
 
 function App() {
