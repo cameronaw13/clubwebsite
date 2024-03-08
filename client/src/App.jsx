@@ -16,9 +16,9 @@ import "./App.css";
 import HomePage from './components/HomePage/HomePage.tsx';
 import Projects from './components/Projects/Projects.tsx';
 import Events from './components/Events/Events.tsx';
-import Foot from "/components/Footer/Foot.tsx";
+import Foot from "./components/Footer/Foot.tsx";
 
-// Add new paths here!
+// add new paths here!
 const repoName = `COC-ACM-Website`
 
 const router = createBrowserRouter([
