@@ -7,10 +7,8 @@ import * as eventsJSON from "./events.json";
 const Events: React.FC = () => {
     const event_list = eventsJSON.events;
     return (
-        <center><div className="EventsPage">
-            <h1 className="EventTitle">
-                EVENTS & ANNOUNCEMENTS
-            </h1>
+        <div className="EventsPage">
+            <h1 className="EventTitle">EVENTS & ANNOUNCEMENTS</h1>
             <div className="EventList">
                 {event_list.map((item, index) => (
                     <EventsCard 
@@ -23,8 +21,9 @@ const Events: React.FC = () => {
                         link={item.link}
                     />
                 ))}
+                (These are pseudo events and do not reflect the COC Tech Club's real schedule)
             </div>
-        </div></center>
+        </div>
     )
 }
 

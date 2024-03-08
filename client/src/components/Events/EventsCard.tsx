@@ -19,12 +19,12 @@ const EventsCard: React.FC<EventsCardInterface> = ({
 }) => {
     return (
         <div className="EventCard">
-            <h3>
-                {link ? <a href={link}>{name}</a> : name}
-            </h3>
-            <p><b>Date: </b>{date}</p>
-            <p><b>Time: </b>{startTime} - {endTime}</p>
-            <p><b>Location: </b>{location.join(", ")}</p>
+            <div className="EventCardText">
+                <p className="EventCardName">{name}</p>
+                <p><b>Date: </b>{date}</p>
+                <p><b>Time: </b>{startTime} - {endTime}</p>
+                <p><b>Location: </b>{link ? <a href={link}>{location.join(", ")}</a> : location.join(", ")}</p>
+            </div>
         </div>
     )
 }
