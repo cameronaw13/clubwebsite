@@ -1,18 +1,20 @@
 import React from "react";
 import "./Foot.css";
 
+const repoName = `COC-ACM-Website`
+
 const tabs = [
   {
-    name: "Home",
-    path: "/",
+    name: `Home`,
+    path: `/${repoName}/`,
   },
   {
-    name: "Projects",
-    path: "/projects",
+    name: `Projects`,
+    path: `/${repoName}/projects`,
   },
   {
-    name: "Events",
-    path: "/events",
+    name: `Events`,
+    path: `/${repoName}/events`,
   }
 ];
 

@@ -16,13 +16,15 @@ import "./App.css";
 import HomePage from './components/HomePage/HomePage.tsx';
 import Projects from './components/Projects/Projects.tsx';
 import Events from './components/Events/Events.tsx';
-import Foot from "../src/components/Footer/Foot.tsx";
+import Foot from "/components/Footer/Foot.tsx";
 
 // Add new paths here!
+const repoName = `COC-ACM-Website`
+
 const router = createBrowserRouter([
-  { path: "/COC-TECH-CLUB-Website/", element: <HomePage /> },
-  { path: "/COC-TECH-CLUB-Website/projects", element: <Projects /> },
-  { path: "/COC-TECH-CLUB-Website/events", element: <Events />},
+  { path: `/${repoName}/`, element: <HomePage /> },
+  { path: `/${repoName}/projects`, element: <Projects /> },
+  { path: `/${repoName}/events`, element: <Events />},
 ]);
 
 function App() {
