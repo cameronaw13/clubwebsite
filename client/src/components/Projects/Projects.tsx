@@ -6,6 +6,7 @@ import * as projectsJSON from "./projects.json";
 
 const Projects: React.FC = () => {
     const projects = projectsJSON.projects;
+    window.scrollTo(0,0);
     return (
         <div className="Projects">
             {projects.map((project, index) => (
