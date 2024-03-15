@@ -1,11 +1,6 @@
-import { useState } from "react";
 import {
-  BrowserRouter as Router,
-  createBrowserRouter,
+  createHashRouter,
   RouterProvider,
-  Routes,
-  Route,
-  Link,
 } from "react-router-dom";
 import Foot from "../src/components/Footer/Foot.tsx";
 import "./App.css";
@@ -15,7 +10,7 @@ import Projects from './components/Projects/Projects.tsx';
 import Events from './components/Events/Events.tsx';
 
 // Add new paths here!
-const router = createBrowserRouter([
+const router = createHashRouter([
   { path: "/", element: <HomePage /> },
   { path: "/projects", element: <Projects /> },
   { path: "/events", element: <Events />},
