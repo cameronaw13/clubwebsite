@@ -2,6 +2,7 @@ import React from "react";
 import "./Foot.css";
 
 const repoName = `clubwebsite`
+
 const tabs = [
   {
     name: `Home`,
@@ -21,9 +22,9 @@ const Foot: React.FC = () => {
   return (
     <nav className="Foot">
       <main className="FootContainer">
-        <p>
-          <h1 style={{ color: "white" }}>COC Tech Club</h1>
-        </p>
+        <a href={`/${repoName}/#/`} className="FootTitleButton">
+          <h1 className="FootTitle">COC Tech Club</h1>
+        </a>
         <section style={{ display: "flex", flexDirection: "row", gap: 10 }}>
           {tabs.map((tab) => {
             return (

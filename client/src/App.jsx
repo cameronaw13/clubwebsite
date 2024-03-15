@@ -27,7 +27,7 @@ function App() {
   return (
     <>
       <Foot />
-      <section style={{ marginTop: '10%'}}>
+      <section style={{ marginTop: '85px'}}>
       <RouterProvider router={router} />
       </section>
     </>
