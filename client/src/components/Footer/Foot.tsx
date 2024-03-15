@@ -28,7 +28,7 @@ const Foot: React.FC = () => {
         <section style={{ display: "flex", flexDirection: "row", gap: 10 }}>
           {tabs.map((tab) => {
             return (
-              <a href={tab.path} className="NavItems" key={tab.name}>
+              <a href={"/clubwebsite/#" + tab.path} className="NavItems" key={tab.name}>
                 {tab.name}
               </a>
             );

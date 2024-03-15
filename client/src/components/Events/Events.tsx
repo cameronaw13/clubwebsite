@@ -1,11 +1,12 @@
-import React from 'react'
+import React from 'react';
 
-import "./Events.css"
-import EventsCard from "./EventsCard.tsx"
+import "./Events.css";
+import EventsCard from "./EventsCard.tsx";
 import * as eventsJSON from "./events.json";
 
 const Events: React.FC = () => {
     const event_list = eventsJSON.events;
+    window.scrollTo(0,0);
     return (
         <div className="EventsPage">
             <h1 className="EventTitle">EVENTS & ANNOUNCEMENTS</h1>

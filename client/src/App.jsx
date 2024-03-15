@@ -1,12 +1,7 @@
 // libraries
-import { useState } from "react";
 import {
-  BrowserRouter as Router,
-  createBrowserRouter,
+  createHashRouter,
   RouterProvider,
-  Routes,
-  Route,
-  Link,
 } from "react-router-dom";
 
 // css files
@@ -21,10 +16,11 @@ import Foot from "./components/Footer/Foot.tsx";
 // add new paths here!
 const repoName = `COC-ACM-Website`
 
-const router = createBrowserRouter([
-  { path: `/${repoName}/`, element: <HomePage /> },
-  { path: `/${repoName}/projects`, element: <Projects /> },
-  { path: `/${repoName}/events`, element: <Events />},
+// Add new paths here!
+const router = createHashRouter([
+  { path: "/", element: <HomePage /> },
+  { path: "/projects", element: <Projects /> },
+  { path: "/events", element: <Events />},
 ]);
 
 function App() {
