@@ -13,9 +13,6 @@ import Projects from './components/Projects/Projects.tsx';
 import Events from './components/Events/Events.tsx';
 import Foot from "./components/Footer/Foot.tsx";
 
-// add new paths here!
-const repoName = `COC-ACM-Website`
-
 // Add new paths here!
 const router = createHashRouter([
   { path: "/", element: <HomePage /> },

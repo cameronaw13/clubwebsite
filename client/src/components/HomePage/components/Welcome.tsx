@@ -4,7 +4,7 @@ import "./Welcome.css"
 const Welcome: React.FC = () => {
     return (
         <div className="WelcomePage">
-            <p className="WelcomeTitle">Welcome to the COC Tech Club!</p>
+            <h1 className="WelcomeTitle">Welcome to the COC Tech Club!</h1>
         </div>
     )
 }

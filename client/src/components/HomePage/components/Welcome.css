@@ -14,8 +14,20 @@
     text-align: center;
     text-wrap: balance;
     position: absolute;
-    top: calc(50% - 85px / 2);
+    top: calc(50% - (85px / 2));
     left: 50%;
     transform: translate(-50%, -50%);
     margin: 0;
+    animation: titleEnter 0.66s 1;
+}
+
+@keyframes titleEnter {
+    from{
+        top: 50%;
+        color: #ffffff00;
+    }
+    to{
+        top: calc(50% - (85px / 2));
+        color: #fff;
+    }
 }
