@@ -13,9 +13,6 @@ import Projects from './components/Projects/Projects.tsx';
 import Events from './components/Events/Events.tsx';
 import Foot from "./components/Footer/Foot.tsx";
 
-// add new paths here!
-const repoName = `COC-ACM-Website`
-
 // Add new paths here!
 const router = createHashRouter([
   { path: "/", element: <HomePage /> },
@@ -27,7 +24,7 @@ function App() {
   return (
     <>
       <Foot />
-      <section style={{ marginTop: '10%'}}>
+      <section style={{ marginTop: '85px'}}>
       <RouterProvider router={router} />
       </section>
     </>

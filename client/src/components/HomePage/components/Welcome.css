@@ -1,0 +1,33 @@
+.WelcomePage {
+    position: absolute;
+    left: 0;
+    top: 85px;
+    width: 100vw;
+    height: calc(100vh - 85px);
+    background-color: #040E43;
+}
+
+.WelcomeTitle {
+    color: #fff;
+    font-size: calc(1rem + 2vw);
+    font-weight: 600;
+    text-align: center;
+    text-wrap: balance;
+    position: absolute;
+    top: calc(50% - (85px / 2));
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    animation: titleEnter 0.66s 1;
+}
+
+@keyframes titleEnter {
+    from{
+        top: 50%;
+        color: #ffffff00;
+    }
+    to{
+        top: calc(50% - (85px / 2));
+        color: #fff;
+    }
+}
