@@ -3,20 +3,37 @@
     {
       "name": "Club Website",
       "description": "Our first project was this website!",
-      "tech": ["React", "TypeScript", "CSS", "HTML"],
+      "tech": ["React.js", "TypeScript", "CSS", "HTML", "Firebase"],
+      "developers": ["Chris Taguba", "Cameron Wichman", "Zach Bar", "Joshua Rashtian"],
       "github": "https://github.com/COC-ACM-TECH-Club/clubwebsite",
-      "image": "../../../assets/Projects/Black.png"
+      "image": ""
     },
     {
       "name": "Unity Game",
       "description": "A game that one of our club members made during our Unity Pathways activities.",
+      "developers": ["Benedict Montesclaros"],
       "tech": ["Unity", "C#", "Visual Studio"],
-      "image": "../../../assets/Projects/Black.png"      
+      "image": ""      
     },
     {
-      "name": "Project C",
-      "description": "This is the description for Project C.",
-      "tech": ["Java", "Spring", "Hibernate"],
+      "name": "Super Volleyball",
+      "description": "Regular volleyball, except you obtain superpowers to score over your opponent!",
+      "developers": ["Aram Aprahamian", "Gabriel Ejinduaka", "Krozz Ruiz"],
+      "tech": ["Unity", "C#", "PlasticSCM", "Visual Studio"],
+      "image": ""
+    },
+    {
+      "name": "PySnake",
+      "description": "A recreation of the popular Snake game that serves as a gateway into game development with Python.",
+      "developers": ["Aram Aprahamian", "Gabriel Ejinduaka", "Krozz Ruiz", "Kellen Galban"],
+      "tech": ["Python", "PyGame"],
+      "image": ""
+    },
+    {
+      "name": "Minecraft Mod",
+      "description": "",
+      "developers": ["Kellen Galban"],
+      "tech": ["Java"],
       "image": ""
     }
   ]

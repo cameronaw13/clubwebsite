@@ -26,8 +26,10 @@ function App() {
   return (
     <>
       <Header />
-      <section style={{ marginTop: '10%'}}>
-      <RouterProvider router={router} />
+      <section style={{ 
+        marginTop: '78px' /* give space to elements below header */
+      }}>
+        <RouterProvider router={router} />
       </section>
     </>
   );

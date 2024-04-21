@@ -1,20 +1,19 @@
 import React from "react";
-import "./Foot.css";
 
-const repoName = `COC-ACM-Website`
+import "./Header.css";
 
 const tabs = [
   {
     name: `Home`,
-    path: `/${repoName}/`,
+    path: `/`,
   },
   {
     name: `Projects`,
-    path: `/${repoName}/projects`,
+    path: `/projects`,
   },
   {
     name: `Events`,
-    path: `/${repoName}/events`,
+    path: `/events`,
   }
 ];
 
@@ -22,9 +21,7 @@ const Foot: React.FC = () => {
   return (
     <nav className="Foot">
       <main className="FootContainer">
-        <p>
-          <h1 style={{ color: "white" }}>COC Tech Club</h1>
-        </p>
+        <h1 style={{ color: "var(--COC-Blue)" }}>COC Tech Club</h1>
         <section style={{ display: "flex", flexDirection: "row", gap: 10 }}>
           {tabs.map((tab) => {
             return (

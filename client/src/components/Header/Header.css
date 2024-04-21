@@ -3,8 +3,9 @@
     top: 0%;
     left: 0%;
     width: 100%;
-    background-image: linear-gradient(to right, #5a2fd0, #1830b370 );
-
+    /* background-imagrgb(24, 47, 179)-gradient(to right, #5a2fd0, #1830b370 ); */
+    background-color: white;
+    border-bottom: 2px solid var(--COC-Blue);
 }
 
 .FootContainer {
@@ -17,5 +18,5 @@
 }
 
 .NavItems {
-    color: #fff;
+    color: var(--COC-Blue);
 }
