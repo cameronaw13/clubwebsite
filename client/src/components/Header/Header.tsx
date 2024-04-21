@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./Foot.css";
+import "./Header.css";
 
 const tabs = [
   {
@@ -17,12 +17,12 @@ const tabs = [
   }
 ];
 
-const Foot: React.FC = () => {
+const Header: React.FC = () => {
   return (
-    <nav className="Foot">
-      <main className="FootContainer">
+    <nav className="Header">
+      <main className="HeaderContainer">
         <p>
-          <h1 style={{ color: "white" }}>COC Tech Club</h1>
+          <h1 className="HeaderTitle">COC Tech Club</h1>
         </p>
         <section style={{ display: "flex", flexDirection: "row", gap: 10 }}>
           {tabs.map((tab) => {
@@ -38,4 +38,4 @@ const Foot: React.FC = () => {
   );
 };
 
-export default Foot;
+export default Header;

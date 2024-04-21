@@ -1,4 +1,4 @@
-.Foot {
+.Header {
     position: fixed;
     top: 0%;
     left: 0%;
@@ -8,7 +8,7 @@
     border-bottom: 2px solid var(--COC-Blue);
 }
 
-.FootContainer {
+.HeaderContainer {
     padding-left: 40px;
     padding-right: 40px;
     height: 85px;
@@ -17,16 +17,16 @@
     align-items: center; 
 }
 
-.FootTitleButton {
+.HeaderTitleButton {
     cursor: pointer;
 }
-.FootTitle {
-    color: #fff;
+.HeaderTitle {
+    color: var(--COC-Blue);
     white-space: nowrap;
     overflow: hidden;
     user-select: none;
 }
-.FootTitle:hover {
+.HeaderTitle:hover {
     color: #fff;
 }
 
