@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./Header.css";
+import "./Foot.css";
 
 const tabs = [
   {
@@ -21,7 +21,9 @@ const Foot: React.FC = () => {
   return (
     <nav className="Foot">
       <main className="FootContainer">
-        <h1 style={{ color: "var(--COC-Blue)" }}>COC Tech Club</h1>
+        <p>
+          <h1 style={{ color: "white" }}>COC Tech Club</h1>
+        </p>
         <section style={{ display: "flex", flexDirection: "row", gap: 10 }}>
           {tabs.map((tab) => {
             return (

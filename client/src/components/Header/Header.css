@@ -11,10 +11,23 @@
 .FootContainer {
     padding-left: 40px;
     padding-right: 40px;
-    height: auto;
+    height: 85px;
     display: flex;
     justify-content: space-between;
     align-items: center; 
+}
+
+.FootTitleButton {
+    cursor: pointer;
+}
+.FootTitle {
+    color: #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    user-select: none;
+}
+.FootTitle:hover {
+    color: #fff;
 }
 
 .NavItems {
