@@ -1,28 +1,51 @@
-import React from 'react';
+import React, { useEffect, useState } from "react";
+import { collection, getDocs, DocumentData } from "firebase/firestore";
+import { db } from "../../firebase.js";
 
 import "./Events.css";
 import EventsCard from "./EventsCard.tsx";
-import * as eventsJSON from "./events.json";
 
 const Events: React.FC = () => {
-    const event_list = eventsJSON.events;
+    const [events, setEvents] = useState<DocumentData[]>();
+
+    // TODO: Add pagination by month & sorting
+    const fetchCollection = async (name) => {
+        const queryDocs = await getDocs(collection(db, name));
+        const queryData = queryDocs.docs.map((doc) => ({
+            id: doc.id,
+            ...doc.data()
+        }));
+        setEvents(queryData);
+    }
+
+    useEffect(() => {
+        try {
+            fetchCollection("events");
+        } catch(e) {
+            console.log(e);
+        }
+    }, []);
+
     window.scrollTo(0,0);
     return (
         <div className="EventsPage">
             <h1 className="EventTitle">EVENTS & ANNOUNCEMENTS</h1>
             <div className="EventList">
-                {event_list.map((item, index) => (
-                    <EventsCard 
-                        key={index}
-                        name={item.name}
-                        date={item.date}
-                        startTime={item.startTime}
-                        endTime={item.endTime}
-                        location={item.location}
-                        link={item.link}
-                    />
-                ))}
-                (These are pseudo events and do not reflect the COC Tech Club's real schedule)
+                {events ? (
+                    events.map((event, index) => (
+                        <EventsCard 
+                            key={index}
+                            name={event.name}
+                            startTime={event.startTime}
+                            endTime={event.endTime}
+                            location={event.location}
+                            link={event.link}
+                        />
+                    ))
+                ) : (
+                    // TODO: Add spinner
+                    <p>Loading Events...</p>
+                )}
             </div>
         </div>
     )

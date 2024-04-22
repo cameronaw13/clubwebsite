@@ -14,7 +14,7 @@ const ProjectCard: React.FC<ProjectCardInterface> = ({
     description = "Project Description", 
     developers = ["N/A"],
     tech = ["N/A"],
-    github = "",
+    link = "",
     image = ""
 }) => {
     return (
@@ -27,7 +27,7 @@ const ProjectCard: React.FC<ProjectCardInterface> = ({
             <img src={image || "https://upload.wikimedia.org/wikipedia/commons/7/71/Black.png"}></img>
             <h3>
                 {name}
-                {github && <> - <a href={github}>GitHub</a></>}
+                {link && <> - <a href={link}>GitHub</a></>}
             </h3>
             <p>{description}</p>
             <p><b>Developers:</b> {developers.join(", ")}</p>
