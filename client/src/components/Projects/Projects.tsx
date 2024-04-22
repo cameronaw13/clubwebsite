@@ -28,22 +28,27 @@ const Projects: React.FC = () => {
 
     window.scrollTo(0,0);
     return (
-        <div className="Projects">
-            {projects ? (
-                projects.map((project, index) => (
-                    <ProjectCard
-                        key={index}
-                        name={project.name}
-                        description={project.description}
-                        tech={project.tech}
-                        link={project.link}
-                        image={project.image}
-                    />
-                ))
-            ) : (
-                // TODO: Add spinner
-                <center><p>Loading Projects...</p></center>
-            )}
+        <div>
+            <h1 style={{
+                textAlign: "center", 
+                fontSize: "36px",
+                color: "var(--COC-Blue)"
+            }}>
+                PROJECTS
+            </h1>
+            <div className="Projects">
+              {projects.map((project, index) => (
+                  <ProjectCard 
+                      key={index}
+                      name={project.name}
+                      description={project.description}
+                      developers={project.developers}
+                      tech={project.tech}
+                      github={project.github}
+                      image={project.image}
+                  />
+              ))}
+            </div>
         </div>
     )
 }

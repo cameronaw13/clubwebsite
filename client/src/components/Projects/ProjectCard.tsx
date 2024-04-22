@@ -3,14 +3,16 @@ import React from 'react'
 interface ProjectCardInterface {
     name: string,
     description: string,
-    tech: string[]
-    link?: string
+    developers: string[],
+    tech: string[],
+    github?: string,
     image?: string
 }
 
 const ProjectCard: React.FC<ProjectCardInterface> = ({
     name = "Project Name", 
     description = "Project Description", 
+    developers = ["N/A"],
     tech = ["N/A"],
     link = "",
     image = ""
@@ -28,6 +30,7 @@ const ProjectCard: React.FC<ProjectCardInterface> = ({
                 {link && <> - <a href={link}>GitHub</a></>}
             </h3>
             <p>{description}</p>
+            <p><b>Developers:</b> {developers.join(", ")}</p>
             <p><b>Technologies Used:</b> {tech.join(", ")}</p>
         </div>
     )

@@ -1,7 +1,6 @@
 import React from "react";
-import "./Foot.css";
 
-const repoName = `clubwebsite`
+import "./Header.css";
 
 const tabs = [
   {
@@ -18,17 +17,17 @@ const tabs = [
   }
 ];
 
-const Foot: React.FC = () => {
+const Header: React.FC = () => {
   return (
-    <nav className="Foot">
-      <main className="FootContainer">
-        <a href={`/${repoName}/#/`} className="FootTitleButton">
-          <h1 className="FootTitle">COC Tech Club</h1>
-        </a>
+    <nav className="Header">
+      <main className="HeaderContainer">
+        <p>
+          <h1 className="HeaderTitle">COC Tech Club</h1>
+        </p>
         <section style={{ display: "flex", flexDirection: "row", gap: 10 }}>
           {tabs.map((tab) => {
             return (
-              <a href={`/${repoName}/#` + tab.path} className="NavItems" key={tab.name}>
+              <a href={"/clubwebsite/#" + tab.path} className="NavItems" key={tab.name}>
                 {tab.name}
               </a>
             );
@@ -39,4 +38,4 @@ const Foot: React.FC = () => {
   );
 };
 
-export default Foot;
+export default Header;

@@ -7,6 +7,14 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* 
+    The COC Communications Guide has approved these hex codes to represent COC in publications.
+
+    Link: https://issuu.com/cocpio/docs/coc_communications_guide_081517?e=25409524/52267472
+  */
+  --COC-Yellow: #ffcb00;
+  --COC-Blue: #003e74;
 }
 
 a {
