@@ -1,12 +1,13 @@
 .WelcomePage {
     position: absolute;
     left: 0;
-    top: 85px;
+    top: 0;
     width: 100vw;
-    height: calc(100vh - 85px);
-    background-color: #040E43;
+    height: 100vh;
+    background-image: radial-gradient(circle at center, #ffffff00, #081a72);
+    animation: backgroundEnter 0.8s forwards;
+    box-shadow: 0 0px 10px #0006;
 }
-
 .WelcomeTitle {
     color: #fff;
     font-size: calc(1rem + 2vw);
@@ -14,20 +15,29 @@
     text-align: center;
     text-wrap: balance;
     position: absolute;
-    top: calc(50% - (85px / 2));
+    text-align: center;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     margin: 0;
-    animation: titleEnter 0.66s 1;
+    animation: titleEnter 0.66s ease-out;
 }
 
 @keyframes titleEnter {
     from{
-        top: 50%;
+        top: calc(50% + 1em);
         color: #ffffff00;
     }
     to{
-        top: calc(50% - (85px / 2));
+        top: 50%;
         color: #fff;
+    }
+}
+@keyframes backgroundEnter {
+    from{
+        background-color: #081a72;
+    }
+    to{
+        background-color: #0f2699;
     }
 }
