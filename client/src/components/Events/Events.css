@@ -2,38 +2,44 @@
     width: calc(90%);
     margin: auto;
 }
-.EventTitle { 
-    color: #1D319D;
-    font-size: 32px;
+
+.EventsTitle { 
+    color: var(--COC-Blue);
+    font-size: calc(1em + 1.5vw);
     text-align: center;
-    padding-bottom: 0.5em;
-    border-bottom: 2px solid rgb(212, 217, 226);
 }
-.EventList {
+
+.EventsList {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-bottom: 5vh;
     gap: 2vh;
 }
+
 .EventCard {
     width: 95%;
-    padding-left: 35px;
-    padding-right: 35px;
-    border-radius: 125px;
-    background-color: #F8F8F8;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    border-radius: 80px / 50%;
+    background-color: #fbfbff;
     box-shadow: 0px 2px 5px 1px rgb(192, 196, 204);
 }
-.EventCardText {
-    padding-left: 60px;
-    padding-right: 60px;
-    font-size: 18px;
-    margin-bottom: 1.25em;
+
+.EventCardContent {
+    padding-left: 4%;
+    padding-right: 4%;
+    margin-bottom: 1.25rem;
+    line-height: 1em;
 }
-.EventCardName {
-    font-size: 28px;
-    margin-top: 0.75em;
+.EventCardContent > h2, .EventCardContent > h2 > a {
+    font-size: calc(1.2rem + 0.5vw);
+    margin-top: 1.25rem;
     margin-bottom: 0.75em;
     font-weight: 600;
+}
+.EventCardContent > p {
+    font-size: calc(0.8rem + 0.5vw);
+    margin-top: 0.75em;
+    margin-bottom: 0.75em;
 }

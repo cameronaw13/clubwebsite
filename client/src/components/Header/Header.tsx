@@ -1,6 +1,9 @@
-import React from "react";
-
+import React, { useEffect, useState, /* useRef */ } from "react";
+import { useLocation } from "react-router-dom";
+import { CSSTransition } from "react-transition-group";
 import "./Header.css";
+
+const repoName = `clubwebsite`
 
 const tabs = [
   {
@@ -14,20 +17,60 @@ const tabs = [
   {
     name: `Events`,
     path: `/events`,
+  },
+  {
+    name: `Join`,
+    path: `/join`,
   }
 ];
 
 const Header: React.FC = () => {
+  const location = useLocation();
+  const isHomePage = () => { return location.pathname === "/" }
+  const [opacity, setOpacity] = useState(isHomePage() ? 0 : 1)
+  //const nodeRef = useRef(null);
+    
+  useEffect(() => {
+    setOpacity(isHomePage() ? 0 : 1)
+    if(isHomePage()) {
+      document.addEventListener("scroll", handleScroll)
+      return () => {
+        document.removeEventListener("scroll", handleScroll)
+      }
+    }
+  }, [location])
+
+  const handleScroll = () => {
+    const bottom = 70; // header height
+    const height = window.innerHeight / 8; // transition height
+    if(window.scrollY < window.innerHeight - (bottom+height)) setOpacity(0)
+    else if(window.scrollY > window.innerHeight - bottom) setOpacity(1)
+    else {
+      setOpacity(Math.abs(window.innerHeight - window.scrollY - (bottom+height)) / height)
+    }
+  }
+
   return (
     <nav className="Header">
+      <CSSTransition
+        in={location.pathname === "/"}
+        timeout={{
+          enter: 100,
+          exit: 600,
+        }}
+        classNames="headerbg"
+        //nodeRef={nodeRef}
+      >
+        <div className="HeaderBackground" style={{ opacity: opacity }}/>
+      </CSSTransition>
       <main className="HeaderContainer">
-        <p>
+        <a href={`/${repoName}/#/`}>
           <h1 className="HeaderTitle">COC Tech Club</h1>
-        </p>
-        <section style={{ display: "flex", flexDirection: "row", gap: 10 }}>
+        </a>
+        <section style={{ display: "flex", flexDirection: "row" }}>
           {tabs.map((tab) => {
             return (
-              <a href={"/clubwebsite/#" + tab.path} className="NavItems" key={tab.name}>
+              <a href={`/${repoName}/#` + tab.path} className="NavItems" key={tab.name}>
                 {tab.name}
               </a>
             );

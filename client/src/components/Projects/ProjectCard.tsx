@@ -5,7 +5,7 @@ interface ProjectCardInterface {
     description: string,
     developers: string[],
     tech: string[],
-    github?: string,
+    link?: string,
     image?: string
 }
 
