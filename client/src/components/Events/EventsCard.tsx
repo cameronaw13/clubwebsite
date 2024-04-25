@@ -18,8 +18,8 @@ const EventsCard: React.FC<EventsCardInterface> = ({
 }) => {
     return (
         <div className="EventCard">
-            <div className="EventCardText">
-                <p className="EventCardName">{link ? <a href={link}>{name}</a> : name}</p>
+            <div className="EventCardContent">
+                <h2>{link ? <a href={link}>{name}</a> : name}</h2>
                 <p><b>Date: </b>{startTime.toDate().toLocaleDateString("en-US", {
                     month:"long",
                     day:"2-digit",

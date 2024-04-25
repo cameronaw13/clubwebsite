@@ -29,8 +29,8 @@ const Events: React.FC = () => {
     window.scrollTo(0,0);
     return (
         <div className="EventsPage">
-            <h1 className="EventTitle">EVENTS & ANNOUNCEMENTS</h1>
-            <div className="EventList">
+            <h1 className="EventsTitle">EVENTS</h1>
+            <div className="EventsList">
                 {events ? (
                     events.map((event, index) => (
                         <EventsCard 

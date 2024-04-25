@@ -3,7 +3,8 @@ import React from 'react'
 
 const MeetUs: React.FC = () => {
     return (
-        <div></div>
+        // placeholder stuff
+        <div style={{height: "300vh"}}></div>
     )
 }
 
