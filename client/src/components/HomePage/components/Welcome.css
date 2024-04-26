@@ -1,13 +1,14 @@
 .WelcomePage {
-    position: absolute;
+    position: relative;
     left: 0;
     top: 0;
     width: 100vw;
-    height: 100vh;
+    height: 75vh;
     background-image: radial-gradient(circle at center, #ffffff00, #081a72);
     animation: backgroundEnter 0.8s forwards;
     box-shadow: 0 0px 10px #0006;
 }
+
 .WelcomeTitle {
     color: #fff;
     font-size: calc(1rem + 2vw);
@@ -33,6 +34,7 @@
         color: #fff;
     }
 }
+
 @keyframes backgroundEnter {
     from{
         background-color: #081a72;
