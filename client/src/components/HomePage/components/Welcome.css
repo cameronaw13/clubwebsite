@@ -40,6 +40,6 @@
         background-color: #081a72;
     }
     to{
-        background-color: #0f2699;
+        background-color: var(--COC-Blue);
     }
 }

@@ -11,7 +11,8 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(to top, #081a72, #0c2083 50%, #0d2189);
+    /* background-image: linear-gradient(to top, #081a72, #0c2083 50%, #0d2189); */
+    background-color: var(--COC-Blue);
     box-shadow: 0 0px 10px #0006;
 }
 
