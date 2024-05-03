@@ -9,7 +9,7 @@ const AboutUs: React.FC = () => {
         <div className="AboutUs">
             <div>
                 <h1>Who are we?</h1>
-                <p>We are a club for students who are interested in Computer Science, Software Engineering, and the tech industry. Our goal is to increase involvement in these fields outside of the academic courses offered at College of the Canyons.</p>
+                <p>We are a club for students who are interested in <b>Computer Science, Software Engineering, and the tech industry.</b> Our goal is to increase involvement in these fields outside of the academic courses offered at College of the Canyons.</p>
             </div>
             <img 
                 className="AboutUsImg"

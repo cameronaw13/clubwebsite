@@ -9,12 +9,12 @@
 }
 @media(min-width: 992px) {
     .WhatWeDo {
-        padding: 8rem;
+        padding: 6rem 8rem;
     }
 }
 @media(min-width: 1200px) {
     .WhatWeDo {
-        padding: 6rem 12rem;
+        padding: 4rem 12rem;
     }
 }
 
@@ -49,16 +49,13 @@
 }
 
 .WhatWeDoTeamText {
-    width: 75%;
+    margin: auto;
+}
+@media (max-width: 767px) {
+    .WhatWeDoTeamText{
+        width: 75%;
+    }
 }
 .WhatWeDoTeamText > h2{
     text-align: center;
-}
-@media (min-width: 768px) {
-    .WhatWeDoTeamText {
-        width: 100%;
-    }
-    .WhatWeDoTeamText > h2{
-        text-align: left;
-    }
 }
