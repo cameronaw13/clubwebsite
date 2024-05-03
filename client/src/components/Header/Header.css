@@ -52,10 +52,10 @@
     margin-top: 0;
     margin-bottom: 0;
     text-shadow:
-        2px 2px 20px #081868,
-        -2px 2px 20px #081868,
-        -2px -2px 20px #081868,
-        2px -2px 20px #081868;
+        2px 2px 1px var(--COC-Blue),
+        -1px 1px 1px var(--COC-Blue),
+        -1px -1px 1px var(--COC-Blue),
+        1px -1px 1px var(--COC-Blue)
 }
 .HeaderTitle, .HeaderTitle:hover {
     color: #fff;
@@ -64,10 +64,10 @@
 .NavItems {
     padding: 0.5em;
     text-shadow:
-        3px 3px 10px #081868,
-        -3px 3px 10px #081868,
-        -3px -3px 10px #081868,
-        3px -3px 10px #081868;
+        2px 2px 1px var(--COC-Blue),
+        -1px 1px 1px var(--COC-Blue),
+        -1px -1px 1px var(--COC-Blue),
+        1px -1px 1px var(--COC-Blue)
 }
 .NavItems, .NavItems:hover {
     color: #fff;

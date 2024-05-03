@@ -4,7 +4,7 @@
     top: 0;
     width: 100vw;
     height: 75vh;
-    background-image: radial-gradient(circle at center, #ffffff00, #081a72);
+    background-image: radial-gradient(circle at center, var(--COC-LightBlue), var(--COC-Blue));
     animation: backgroundEnter 0.8s forwards;
     box-shadow: 0 0px 10px #0006;
 }
@@ -37,7 +37,7 @@
 
 @keyframes backgroundEnter {
     from{
-        background-color: #081a72;
+        background-color: var(--COC-LightBlue);
     }
     to{
         background-color: var(--COC-Blue);
