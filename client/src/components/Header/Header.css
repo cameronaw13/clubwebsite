@@ -61,14 +61,31 @@
     color: #fff;
 }
 
-.NavItems {
-    padding: 0.5em;
-    text-shadow:
-        2px 2px 1px var(--COC-Blue),
-        -1px 1px 1px var(--COC-Blue),
-        -1px -1px 1px var(--COC-Blue),
-        1px -1px 1px var(--COC-Blue)
+@media (min-width: 768px) {
+    .NavItems {
+        padding: 0.5em;
+        text-shadow:
+            2px 2px 1px var(--COC-Blue),
+            -1px 1px 1px var(--COC-Blue),
+            -1px -1px 1px var(--COC-Blue),
+            1px -1px 1px var(--COC-Blue)
+    }
+    .NavMenu {
+        display: none;
+    }
 }
+
+@media (max-width: 768px) {
+    .NavItems {
+        display: none;
+    }
+    .NavMenu {
+        all: unset;
+        cursor: pointer;
+        padding: 0.5em;
+    }
+}
+
 .NavItems, .NavItems:hover {
     color: #fff;
 }
