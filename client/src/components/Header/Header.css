@@ -11,7 +11,8 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(to top, #081a72, #0c2083 50%, #0d2189);
+    /* background-image: linear-gradient(to top, #081a72, #0c2083 50%, #0d2189); */
+    background-color: var(--COC-Blue);
     box-shadow: 0 0px 10px #0006;
 }
 
@@ -51,10 +52,10 @@
     margin-top: 0;
     margin-bottom: 0;
     text-shadow:
-        2px 2px 20px #081868,
-        -2px 2px 20px #081868,
-        -2px -2px 20px #081868,
-        2px -2px 20px #081868;
+        2px 2px 1px var(--COC-Blue),
+        -1px 1px 1px var(--COC-Blue),
+        -1px -1px 1px var(--COC-Blue),
+        1px -1px 1px var(--COC-Blue)
 }
 .HeaderTitle, .HeaderTitle:hover {
     color: #fff;
@@ -63,10 +64,10 @@
 .NavItems {
     padding: 0.5em;
     text-shadow:
-        3px 3px 10px #081868,
-        -3px 3px 10px #081868,
-        -3px -3px 10px #081868,
-        3px -3px 10px #081868;
+        2px 2px 1px var(--COC-Blue),
+        -1px 1px 1px var(--COC-Blue),
+        -1px -1px 1px var(--COC-Blue),
+        1px -1px 1px var(--COC-Blue)
 }
 .NavItems, .NavItems:hover {
     color: #fff;

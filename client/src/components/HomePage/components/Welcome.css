@@ -1,13 +1,14 @@
 .WelcomePage {
-    position: absolute;
+    position: relative;
     left: 0;
     top: 0;
     width: 100vw;
-    height: 100vh;
-    background-image: radial-gradient(circle at center, #ffffff00, #081a72);
+    height: 75vh;
+    background-image: radial-gradient(circle at center, var(--COC-LightBlue), var(--COC-Blue));
     animation: backgroundEnter 0.8s forwards;
     box-shadow: 0 0px 10px #0006;
 }
+
 .WelcomeTitle {
     color: #fff;
     font-size: calc(1rem + 2vw);
@@ -33,11 +34,12 @@
         color: #fff;
     }
 }
+
 @keyframes backgroundEnter {
     from{
-        background-color: #081a72;
+        background-color: var(--COC-LightBlue);
     }
     to{
-        background-color: #0f2699;
+        background-color: var(--COC-Blue);
     }
 }

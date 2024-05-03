@@ -1,0 +1,6 @@
+.Footer {
+    padding: 1rem 2rem;
+    margin-top: 2rem;
+    color: white;
+    background-color: var(--COC-Blue);
+}

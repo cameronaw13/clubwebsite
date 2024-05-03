@@ -8,6 +8,7 @@ import "./App.css";
 
 // components
 import Header from "./components/Header/Header.tsx";
+import Footer from "./components/Footer/Footer.tsx"
 import HomePage from './components/HomePage/HomePage.tsx';
 import Projects from './components/Projects/Projects.tsx';
 import Events from './components/Events/Events.tsx';
@@ -34,6 +35,7 @@ const Page = () => {
 				{outlet}
 				</CSSTransition>
 			</SwitchTransition>
+			<Footer />
 		</>
 	)
 }
