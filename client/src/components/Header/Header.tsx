@@ -28,15 +28,15 @@ const tabs = [
 ];
 
 const Header: React.FC = () => {
-  const location = useLocation();
-  const isHomePage = () => { return location.pathname === "/" }
-  const [opacity, setOpacity] = useState(isHomePage() ? 0 : 1)
+  const location = useLocation()
+  const isHomePage = location.pathname === "/"
+  const [startingPage] = useState(location.pathname)
+  const [opacity, setOpacity] = useState(isHomePage ? 0 : 1)
   const [isMenu, setMenu] = useState(false);
-  //const nodeRef = useRef(null);
     
   useEffect(() => {
-    setOpacity(isHomePage() ? 0 : 1)
-    if(isHomePage()) {
+    setOpacity(isHomePage ? 0 : 1)
+    if(isHomePage) {
       document.addEventListener("scroll", handleScroll)
       return () => {
         document.removeEventListener("scroll", handleScroll)
@@ -45,13 +45,14 @@ const Header: React.FC = () => {
   }, [location])
 
   const handleScroll = () => {
-    const bottom = 70; // header height
-    const height = window.innerHeight / 8; // transition height
-    if(window.scrollY < window.innerHeight - (bottom+height)) setOpacity(0)
-    else if(window.scrollY > window.innerHeight - bottom) setOpacity(1)
-    else {
-      setOpacity(Math.abs(window.innerHeight - window.scrollY - (bottom+height)) / height)
-    }
+    const header = 70; // header height 
+    const welcome = window.innerHeight * (window.innerWidth < 768 ? 0.75 : 0.9); // current WelcomePage height
+    const length = welcome / 8; // transition length
+
+    setOpacity(Math.max(0,
+              Math.min(1,
+              (welcome - window.scrollY - (header+length)) / -length // scrollY linearly increases from 0 to 1 if transitionStart < scrollY < transitionEnd
+    )));
   }
 
   const handleMenu = () => {
@@ -60,15 +61,19 @@ const Header: React.FC = () => {
 
   return (
     <>
-      <nav className="Header">
+      <CSSTransition
+          in={location.pathname === "/"}
+          timeout={100}
+          classNames="div"
+        >
+      <nav className="Header" style={{ position: startingPage === "/" ? "fixed" : "sticky" }}>
         <CSSTransition
           in={location.pathname === "/"}
           timeout={{
             enter: 100,
             exit: 600,
           }}
-          classNames="headerbg"
-          //nodeRef={nodeRef}
+          classNames="bg"
         >
           <div className="HeaderBackground" style={{ opacity: opacity }}/>
         </CSSTransition>
@@ -90,6 +95,7 @@ const Header: React.FC = () => {
           </section>
         </main>
       </nav>
+      </CSSTransition>
       { isMenu ? (
         <Menu />
       ) : (

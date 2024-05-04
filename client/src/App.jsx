@@ -17,7 +17,6 @@ import JoinForm from "./components/JoinForm/JoinForm.tsx";
 const Page = () => {
 	const location = useLocation();
 	const outlet = useOutlet();
-	//const nodeRef = createRef(null);
 	return (
 		<>
 			<Header />
@@ -29,7 +28,6 @@ const Page = () => {
 						exit: 100,
 					}}
 					classNames="page"
-					//nodeRef={nodeRef}
 					unmountOnExit
 				>
 				{outlet}
@@ -55,11 +53,7 @@ const router = createHashRouter([
 
 const App = () => {
 	return (
-		<>
-			<section style={{ marginTop: '70px' }}>
-				<RouterProvider router={router} />
-			</section>
-		</>
+		<RouterProvider router={router} />
 	);
 }
 

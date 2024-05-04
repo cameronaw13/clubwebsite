@@ -1,17 +1,13 @@
-.EventsPage {
-    width: calc(90%);
-    margin: auto;
-}
-
 .EventsTitle { 
     color: var(--COC-Blue);
     font-size: calc(1em + 1.5vw);
     text-align: center;
-    padding-top: 2rem;
 }
 
 .EventsList {
+    width: calc(90%);
     display: flex;
+    margin: auto;
     flex-direction: column;
     justify-content: center;
     align-items: center;

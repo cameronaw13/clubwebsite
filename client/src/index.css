@@ -30,6 +30,9 @@ a:hover {
 body {
   margin: 0;
   min-width: 320px;
-  min-height: 100vh;
   background-color: #f6f7ff;
+}
+
+#root {
+  min-height: 100vh;
 }

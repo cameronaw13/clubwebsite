@@ -28,7 +28,7 @@ const Projects: React.FC = () => {
 
     window.scrollTo(0,0);
     return (
-        <div>
+        <>
             <h1 className="ProjectsTitle">PROJECTS</h1>
             <div className="Projects">
                 {projects ? (
@@ -48,7 +48,7 @@ const Projects: React.FC = () => {
                     <center><p>Loading Projects...</p></center>
                 )}
             </div>
-        </div>
+        </>
     )
 }
 

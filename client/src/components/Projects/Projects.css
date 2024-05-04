@@ -9,7 +9,6 @@
     color: var(--COC-Blue);
     font-size: calc(1em + 1.5vw);
     text-align: center;
-    padding-top: 2rem;
 }
 
 .ProjectCard {

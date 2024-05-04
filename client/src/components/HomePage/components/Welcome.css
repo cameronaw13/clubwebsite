@@ -1,12 +1,19 @@
 .WelcomePage {
     position: relative;
-    left: 0;
-    top: 0;
-    width: 100vw;
-    height: 75vh;
     background-image: radial-gradient(circle at center, var(--COC-LightBlue), var(--COC-Blue));
     animation: backgroundEnter 0.8s forwards;
     box-shadow: 0 0px 10px #0006;
+}
+
+@media (min-width: 768px) {
+    .WelcomePage {
+        height: 90vh;
+    }
+}
+@media (max-width: 768px) {
+    .WelcomePage {
+        height: 75vh;
+    }
 }
 
 .WelcomeTitle {
@@ -27,7 +34,7 @@
 @keyframes titleEnter {
     from{
         top: calc(50% + 1em);
-        color: #ffffff00;
+        color: #fff0;
     }
     to{
         top: 50%;

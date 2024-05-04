@@ -1,8 +1,6 @@
 .MenuIcon {
     height: 40px;
     fill: #fff;
-    filter: drop-shadow(3px 3px 10px #0c2083)
-            drop-shadow(-3px 3px 10px #0c2083)
-            drop-shadow(-3px -3px 10px #0c2083)
-            drop-shadow(3px -3px 10px #0c2083);
+    filter: drop-shadow(1px 1px 1px var(--COC-Blue))
+            drop-shadow(0px 0px 2px var(--COC-Blue))
 }

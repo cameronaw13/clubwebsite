@@ -28,7 +28,7 @@ const Events: React.FC = () => {
 
     window.scrollTo(0,0);
     return (
-        <div className="EventsPage">
+        <>
             <h1 className="EventsTitle">EVENTS</h1>
             <div className="EventsList">
                 {events ? (
@@ -47,7 +47,7 @@ const Events: React.FC = () => {
                     <p>Loading Events...</p>
                 )}
             </div>
-        </div>
+        </>
     )
 }
 
