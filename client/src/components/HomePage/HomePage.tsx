@@ -8,11 +8,11 @@ import WhatWeDo from './components/WhatWeDo'
 const HomePage: React.FC = () => {
     window.scrollTo(0,0);
     return (
-        <div>
+        <>
             <Welcome/>
             <AboutUs/>
             <WhatWeDo/>
-        </div>
+        </>
     )
 }
 

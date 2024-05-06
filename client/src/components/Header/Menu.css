@@ -1,0 +1,14 @@
+.MenuDiv {
+    position: fixed;
+    top: 70px;
+    right: 0;
+    padding: 0 2em 0.7em 2em;
+    background-color: var(--COC-Blue);
+    box-shadow: 0 0px 10px #0006;
+    z-index: 20;
+}
+
+.MenuItems, .MenuItems:hover {
+    color: #fff;
+    padding: 0.35em;
+}

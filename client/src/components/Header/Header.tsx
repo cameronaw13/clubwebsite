@@ -49,9 +49,9 @@ const Header: React.FC = () => {
     const welcome = window.innerHeight * (window.innerWidth < 768 ? 0.75 : 0.9); // current WelcomePage height
     const length = welcome / 8; // transition length
 
-    setOpacity(Math.max(0,
+    setOpacity(Math.max(0, // scrollY linearly increases from 0 to 1 if transitionStart < scrollY < transitionEnd
               Math.min(1,
-              (welcome - window.scrollY - (header+length)) / -length // scrollY linearly increases from 0 to 1 if transitionStart < scrollY < transitionEnd
+              (welcome - window.scrollY - (header+length)) / -length
     )));
   }
 
@@ -64,7 +64,7 @@ const Header: React.FC = () => {
       <CSSTransition
           in={location.pathname === "/"}
           timeout={100}
-          classNames="div"
+          classNames="trans-div"
         >
       <nav className="Header" style={{ position: startingPage === "/" ? "fixed" : "sticky" }}>
         <CSSTransition
@@ -73,11 +73,11 @@ const Header: React.FC = () => {
             enter: 100,
             exit: 600,
           }}
-          classNames="bg"
+          classNames="trans-bg"
         >
-          <div className="HeaderBackground" style={{ opacity: opacity }}/>
+          <div className="HeaderBg" style={{ opacity: opacity }}/>
         </CSSTransition>
-        <main className="HeaderContainer">
+        <main className="HeaderDiv">
           <a href={`/${repoName}/#/`}>
             <h1 className="HeaderTitle">COC Tech Club</h1>
           </a>
@@ -89,7 +89,7 @@ const Header: React.FC = () => {
                   </a>
               );
             })}
-            <button onClick={handleMenu} className="NavMenu">
+            <button onClick={handleMenu} className="NavButton">
               <MenuIcon />
             </button>
           </section>
@@ -97,7 +97,7 @@ const Header: React.FC = () => {
       </nav>
       </CSSTransition>
       { isMenu ? (
-        <Menu />
+        <Menu tabs={tabs} repoName={repoName}/>
       ) : (
         ''
       )}
