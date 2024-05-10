@@ -1,38 +1,14 @@
 import React, { useEffect, useState, /* useRef */ } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link, NavLink } from "react-router-dom";
 import { CSSTransition } from "react-transition-group";
 
 import "./Header.css";
-import "../../assets/Header/HeaderAssets.css";
-import { MenuIcon } from "../../assets/Header/MenuIcon.tsx";
-import Menu from "./Menu.tsx";
 
-const repoName = `clubwebsite`
-const tabs = [
-  {
-    name: `Home`,
-    path: `/`,
-  },
-  {
-    name: `Projects`,
-    path: `/projects`,
-  },
-  {
-    name: `Events`,
-    path: `/events`,
-  },
-  {
-    name: `Join`,
-    path: `/join`,
-  },
-];
-
-const Header: React.FC = () => {
+const Header: React.FC<{routes: {name: string, path: string, element: React.JSX.Element, nodeRef: React.RefObject<any>}[]}> = ({routes}) => {
   const location = useLocation()
   const isHomePage = location.pathname === "/"
   const [startingPage] = useState(location.pathname)
   const [opacity, setOpacity] = useState(isHomePage ? 0 : 1)
-  const [isMenu, setMenu] = useState(false);
     
   useEffect(() => {
     setOpacity(isHomePage ? 0 : 1)
@@ -46,17 +22,16 @@ const Header: React.FC = () => {
 
   const handleScroll = () => {
     const header = 70; // header height 
-    const welcome = window.innerHeight * (window.innerWidth < 768 ? 0.75 : 0.9); // current WelcomePage height
+    const welcome = Math.max(window.innerHeight * 0.7,
+                    Math.min(window.innerHeight * 0.9,
+                    (window.innerWidth * 0.75)
+    )); // current WelcomePage height
     const length = welcome / 8; // transition length
 
     setOpacity(Math.max(0, // scrollY linearly increases from 0 to 1 if transitionStart < scrollY < transitionEnd
               Math.min(1,
               (welcome - window.scrollY - (header+length)) / -length
     )));
-  }
-
-  const handleMenu = () => {
-    setMenu(!isMenu);
   }
 
   return (
@@ -78,29 +53,25 @@ const Header: React.FC = () => {
           <div className="HeaderBg" style={{ opacity: opacity }}/>
         </CSSTransition>
         <main className="HeaderDiv">
-          <a href={`/${repoName}/#/`}>
+          <Link to="/">
             <h1 className="HeaderTitle">COC Tech Club</h1>
-          </a>
-          <section style={{ display: "flex", flexDirection: "row" }}>
-            {tabs.map((tab) => {
+          </Link>
+          <section style={{ display: "flex", flexDirection: "row", gap: "0.25em" }}>
+            {routes.map((route) => {
               return (
-                  <a href={`/${repoName}/#` + tab.path} className="NavItems" key={tab.name}>
-                    {tab.name}
-                  </a>
+                  <NavLink
+                    key={route.name}
+                    to={route.path}
+                    className="NavItems"
+                  >
+                    {route.name}
+                  </NavLink>
               );
             })}
-            <button onClick={handleMenu} className="NavButton">
-              <MenuIcon />
-            </button>
           </section>
         </main>
       </nav>
       </CSSTransition>
-      { isMenu ? (
-        <Menu tabs={tabs} repoName={repoName}/>
-      ) : (
-        ''
-      )}
     </>
   );
 };

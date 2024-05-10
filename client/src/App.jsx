@@ -1,5 +1,5 @@
 // libraries
-//import { createRef } from "react";
+import { createRef } from "react";
 import { createHashRouter, RouterProvider, useLocation, useOutlet } from "react-router-dom";
 import { CSSTransition, SwitchTransition } from "react-transition-group";
 
@@ -8,6 +8,7 @@ import "./App.css";
 
 // components
 import Header from "./components/Header/Header.tsx";
+import Menu from "./components/Header/Menu.tsx";
 import Footer from "./components/Footer/Footer.tsx"
 import HomePage from './components/HomePage/HomePage.tsx';
 import Projects from './components/Projects/Projects.tsx';
@@ -19,7 +20,8 @@ const Page = () => {
 	const outlet = useOutlet();
 	return (
 		<>
-			<Header />
+			<Header routes={routes}/>
+			<Menu routes={routes}/>
 			<SwitchTransition>
 				<CSSTransition
 					key={location.pathname}
@@ -38,16 +40,41 @@ const Page = () => {
 	)
 }
 
+const routes = [
+	{
+		name: "Home",
+		path: "/",
+		element: <HomePage />,
+		nodeRef: createRef()
+	},
+	{
+		name: "Projects",
+		path: "/projects",
+		element: <Projects />,
+		nodeRef: createRef()
+	},
+	{
+		name: "Events",
+		path: "/events",
+		element: <Events />,
+		nodeRef: createRef()
+	},
+	{
+		name: "Join",
+		path: "/join",
+		element: <JoinForm />,
+		nodeRef: createRef()
+	}
+];
+
 // Add new paths here!
 const router = createHashRouter([
 	{
 		element: <Page />,
-		children: [
-			{ path: "/", element: <HomePage /> },
-			{ path: "/projects", element: <Projects /> },
-			{ path: "/events", element: <Events /> },
-			{ path: "/join", element: <JoinForm /> },
-		],
+		children: routes.map((route) => ({
+			path: route.path,
+			element: route.element,
+		}))
 	},
 ]);
 

@@ -27,46 +27,35 @@
     user-select: none;
 }
 
-.HeaderTitle {
+.HeaderTitle, .HeaderTitle:hover {
     padding: 0.75em;
     margin: auto;
     white-space: nowrap;
+
+    color: #fff;
+    text-shadow:
+        1px 1px 1px var(--COC-Blue),
+        0px 0px 2px var(--COC-Blue);
     cursor: pointer;
 }
-.HeaderTitle, .HeaderTitle:hover {
+
+.NavItems, .NavItems:hover {
+    padding: 0.5em;
+    border-radius: 0.5em;
+
     color: #fff;
+    text-shadow:
+        1px 1px 1px var(--COC-Blue),
+        0px 0px 2px var(--COC-Blue);
+    transition: background-color, box-shadow 150ms;
 }
-
-@media (min-width: 768px) {
-    .NavItems {
-        display: block;
-        padding: 0.5em;
-    }
-    .NavButton {
-        display: none;
-    }
+.NavItems:hover {
+    background-color: #fff2;
 }
-
 @media (max-width: 768px) {
     .NavItems {
         display: none;
     }
-    .NavButton {
-        all: unset;
-        display: block;
-        padding: 0.5em;
-        cursor: pointer;
-    }
-}
-
-.HeaderTitle, .NavItems {
-    text-shadow:
-        1px 1px 1px var(--COC-Blue),
-        0px 0px 2px var(--COC-Blue)
-}
-
-.NavItems, .NavItems:hover {
-    color: #fff;
 }
 
 .trans-div-enter-active {

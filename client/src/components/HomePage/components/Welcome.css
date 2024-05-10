@@ -5,15 +5,10 @@
     box-shadow: 0 0px 10px #0006;
 }
 
-@media (min-width: 768px) {
-    .WelcomePage {
-        height: 90vh;
-    }
-}
-@media (max-width: 768px) {
-    .WelcomePage {
-        height: 75vh;
-    }
+.WelcomePage {
+    min-height: 70vh;
+    height: 75vw;
+    max-height: 90vh;
 }
 
 .WelcomeTitle {
@@ -33,7 +28,7 @@
 
 @keyframes titleEnter {
     from{
-        top: calc(50% + 1em);
+        top: calc(50% + 0.75em);
         color: #fff0;
     }
     to{
@@ -41,7 +36,6 @@
         color: #fff;
     }
 }
-
 @keyframes backgroundEnter {
     from{
         background-color: var(--COC-LightBlue);

@@ -1,14 +1,45 @@
-.MenuDiv {
+.Menu {
     position: fixed;
-    top: 70px;
+    top: 0;
     right: 0;
-    padding: 0 2em 0.7em 2em;
+
+    z-index: 20;
+}
+@media (min-width: 768px) {
+    .Menu {
+        display: none;
+    }
+}
+
+.MenuBtn {
+    all: unset;
+    position: fixed;
+    right: 0;
+
+    padding: 8px;
+    margin: 7px;
+    cursor: pointer;
+}
+
+.MenuDiv {
+    padding: 70px 0.8em 0.5em 0.8em;
     background-color: var(--COC-Blue);
     box-shadow: 0 0px 10px #0006;
-    z-index: 20;
+
+    user-select: none;
 }
 
 .MenuItems, .MenuItems:hover {
+    text-align: center;
+    padding: 0.5em 1.5em 0.5em 1.5em;
+    border-radius: 0.5em;
+
     color: #fff;
-    padding: 0.35em;
+    text-shadow:
+        1px 1px 1px var(--COC-Blue),
+        0px 0px 2px var(--COC-Blue);
+    transition: background-color, box-shadow 150ms;
+}
+.MenuItems:hover {
+    background-color: #fff2;
 }
