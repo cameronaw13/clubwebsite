@@ -1,14 +1,12 @@
 .WelcomePage {
     position: relative;
-    background-image: radial-gradient(circle at center, var(--COC-LightBlue), var(--COC-Blue));
-    animation: backgroundEnter 0.8s forwards;
-    box-shadow: 0 0px 10px #0006;
-}
-
-.WelcomePage {
     min-height: 70vh;
     height: 75vw;
     max-height: 90vh;
+
+    background-image: radial-gradient(circle at center, var(--COC-LightBlue), var(--COC-Blue));
+    animation: backgroundEnter 0.8s forwards;
+    box-shadow: 0 0px 10px #0006;
 }
 
 .WelcomeTitle {

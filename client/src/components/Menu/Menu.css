@@ -49,12 +49,3 @@
 .MenuItems:hover {
     background-color: #fff2;
 }
-
-@keyframes menuEnter {
-    from{
-        right: -9em;
-    }
-    to{
-        right: 0;
-    }
-}
