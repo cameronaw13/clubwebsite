@@ -1,4 +1,4 @@
-import React, { useEffect, useState, /* useRef */ } from "react";
+import React, { useEffect, useState, createRef } from "react";
 import { useLocation, Link, NavLink } from "react-router-dom";
 import { CSSTransition } from "react-transition-group";
 
@@ -9,6 +9,9 @@ const Header: React.FC<{routes: {name: string, path: string, element: React.JSX.
   const isHomePage = location.pathname === "/"
   const [startingPage] = useState(location.pathname)
   const [opacity, setOpacity] = useState(isHomePage ? 0 : 1)
+
+  const headerRef = createRef<any>();
+  const bgRef = createRef<any>();
     
   useEffect(() => {
     setOpacity(isHomePage ? 0 : 1)
@@ -40,37 +43,39 @@ const Header: React.FC<{routes: {name: string, path: string, element: React.JSX.
           in={location.pathname === "/"}
           timeout={100}
           classNames="trans-div"
-        >
-      <nav className="Header" style={{ position: startingPage === "/" ? "fixed" : "sticky" }}>
-        <CSSTransition
-          in={location.pathname === "/"}
-          timeout={{
-            enter: 100,
-            exit: 600,
-          }}
-          classNames="trans-bg"
-        >
-          <div className="HeaderBg" style={{ opacity: opacity }}/>
-        </CSSTransition>
-        <main className="HeaderDiv">
-          <Link to="/">
-            <h1 className="HeaderTitle">COC Tech Club</h1>
-          </Link>
-          <section style={{ display: "flex", flexDirection: "row", gap: "0.25em" }}>
-            {routes.map((route) => {
-              return (
-                  <NavLink
-                    key={route.name}
-                    to={route.path}
-                    className="NavItems"
-                  >
-                    {route.name}
-                  </NavLink>
-              );
-            })}
-          </section>
-        </main>
-      </nav>
+          nodeRef={headerRef}
+      >
+        <nav className="Header" ref={headerRef} style={{ position: startingPage === "/" ? "fixed" : "sticky" }}>
+          <CSSTransition
+            in={location.pathname === "/"}
+            timeout={{
+              enter: 100,
+              exit: 600,
+            }}
+            classNames="trans-bg"
+            nodeRef={bgRef}
+          >
+            <div className="HeaderBg" ref={bgRef} style={{ opacity: opacity }}/>
+          </CSSTransition>
+          <main className="HeaderMain">
+            <Link to="/">
+              <h1 className="HeaderTitle">COC Tech Club</h1>
+            </Link>
+            <section className="HeaderSection">
+              {routes.map((route) => {
+                return (
+                    <NavLink
+                      key={route.name}
+                      to={route.path}
+                      className="NavItems"
+                    >
+                      {route.name}
+                    </NavLink>
+                );
+              })}
+            </section>
+          </main>
+        </nav>
       </CSSTransition>
     </>
   );

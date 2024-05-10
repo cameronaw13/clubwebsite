@@ -8,7 +8,7 @@ import "./App.css";
 
 // components
 import Header from "./components/Header/Header.tsx";
-import Menu from "./components/Header/Menu.tsx";
+import Menu from "./components/Menu/Menu.tsx";
 import Footer from "./components/Footer/Footer.tsx"
 import HomePage from './components/HomePage/HomePage.tsx';
 import Projects from './components/Projects/Projects.tsx';
@@ -18,6 +18,8 @@ import JoinForm from "./components/JoinForm/JoinForm.tsx";
 const Page = () => {
 	const location = useLocation();
 	const outlet = useOutlet();
+	const pageRef = createRef();
+	
 	return (
 		<>
 			<Header routes={routes}/>
@@ -30,9 +32,12 @@ const Page = () => {
 						exit: 100,
 					}}
 					classNames="page"
+					nodeRef={pageRef}
 					unmountOnExit
 				>
-				{outlet}
+					<div ref={pageRef}>
+						{outlet}
+					</div>
 				</CSSTransition>
 			</SwitchTransition>
 			<Footer />
@@ -44,26 +49,22 @@ const routes = [
 	{
 		name: "Home",
 		path: "/",
-		element: <HomePage />,
-		nodeRef: createRef()
+		element: <HomePage />
 	},
 	{
 		name: "Projects",
 		path: "/projects",
-		element: <Projects />,
-		nodeRef: createRef()
+		element: <Projects />
 	},
 	{
 		name: "Events",
 		path: "/events",
-		element: <Events />,
-		nodeRef: createRef()
+		element: <Events />
 	},
 	{
 		name: "Join",
 		path: "/join",
-		element: <JoinForm />,
-		nodeRef: createRef()
+		element: <JoinForm />
 	}
 ];
 

@@ -1,27 +1,33 @@
-.Menu {
-    position: fixed;
-    top: 0;
-    right: 0;
-
-    z-index: 20;
-}
-@media (min-width: 768px) {
-    .Menu {
-        display: none;
-    }
-}
-
 .MenuBtn {
     all: unset;
     position: fixed;
+    top: 0;
     right: 0;
 
     padding: 8px;
     margin: 7px;
     cursor: pointer;
+    z-index: 30;
 }
 
-.MenuDiv {
+.Menu {
+    position: fixed;
+    top: 0;
+    z-index: 20;
+    transition: right ease-out 150ms;
+}
+
+@media (min-width: 768px) {
+    .MenuBtn, .Menu {
+        visibility: hidden;
+    }
+}
+
+.MenuSection {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25em;
+
     padding: 70px 0.8em 0.5em 0.8em;
     background-color: var(--COC-Blue);
     box-shadow: 0 0px 10px #0006;
@@ -42,4 +48,13 @@
 }
 .MenuItems:hover {
     background-color: #fff2;
+}
+
+@keyframes menuEnter {
+    from{
+        right: -9em;
+    }
+    to{
+        right: 0;
+    }
 }

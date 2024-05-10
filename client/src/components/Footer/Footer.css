@@ -2,7 +2,6 @@
     position: sticky;
     top: 100%;
     padding: 1rem 2rem;
-    transform: translateY(100%);
     color: white;
     background-color: var(--COC-Blue);
 }
