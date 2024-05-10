@@ -36,8 +36,8 @@ const Menu: React.FC<{routes: {name: string, path: string}[]}> = ({routes}) => {
   
   return (
     <div ref={nodeRef}>
-      <button onClick={handleMenu} className="MenuBtn">
-        <MenuIcon />
+      <button className="MenuBtn" onClick={handleMenu}>
+        <MenuIcon open={isMenu}/>
       </button>
       <div className="Menu" ref={menuRef} style={{ right: isMenu ? 0 : -width }}>
         <section className="MenuSection">
