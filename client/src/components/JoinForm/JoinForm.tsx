@@ -30,6 +30,7 @@ const JoinForm = () => {
         setFormData(defaultFormData);
     };
 
+    window.scrollTo(0,0);
     return (
         <form noValidate onSubmit={handleSubmit}>
             <div>

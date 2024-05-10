@@ -58,7 +58,10 @@ const Header: React.FC<{routes: {name: string, path: string, element: React.JSX.
             <div className="HeaderBg" ref={bgRef} style={{ opacity: opacity }}/>
           </CSSTransition>
           <main className="HeaderMain">
-            <Link to="/">
+            <Link
+              to="/"
+              onClick={() => window.scrollTo(0,0)}
+            >
               <h1 className="HeaderTitle">COC Tech Club</h1>
             </Link>
             <section className="HeaderSection">
@@ -68,6 +71,10 @@ const Header: React.FC<{routes: {name: string, path: string, element: React.JSX.
                       key={route.name}
                       to={route.path}
                       className="NavItems"
+                      onClick={() => {
+                        if(location.pathname === route.path)
+                          window.scrollTo(0,0)
+                      }}
                     >
                       {route.name}
                     </NavLink>

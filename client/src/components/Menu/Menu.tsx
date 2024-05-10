@@ -1,11 +1,12 @@
 import React, { useState, useEffect, createRef } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 import "./Menu.css"
 import { MenuIcon } from "../../assets/Header/MenuIcon.tsx";
 import "../../assets/Header/MenuAssets.css";
 
 const Menu: React.FC<{routes: {name: string, path: string}[]}> = ({routes}) => {
+  const location = useLocation();
   const [isMenu, setMenu] = useState(false);
   const [width, setWidth] = useState(Number.MAX_VALUE);
 
@@ -46,6 +47,11 @@ const Menu: React.FC<{routes: {name: string, path: string}[]}> = ({routes}) => {
               key={route.name}
               to={route.path}
               className="MenuItems"
+              onClick={() => {
+                if(location.pathname === route.path)
+                  window.scrollTo(0,0)
+                setMenu(false)
+              }}
             >
               {route.name}
             </NavLink>
