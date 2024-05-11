@@ -16,7 +16,7 @@
 }
 @media(min-width: 992px) {
     .AboutUs {
-        padding: 8rem;
+        padding: 6rem;
     }
 }
 
@@ -36,6 +36,6 @@
 @media (min-width: 768px) {
     .AboutUsImg {
         margin-top: 0rem;
-        width: 50%;
+        width: calc(20em + 50%);
     }
 }

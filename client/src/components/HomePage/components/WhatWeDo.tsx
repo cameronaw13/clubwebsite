@@ -2,8 +2,8 @@ import React from 'react'
 
 import "./WhatWeDo.css"
 
-import webImg1 from "/public/who-are-we-web-1.png"
-import gameImg1 from "/public/who-are-we-game-1.png"
+import webImg1 from "../../../assets/HomePage/who-are-we-web-1.png"
+import gameImg1 from "../../../assets/HomePage/who-are-we-game-1.png"
 
 const WhatWeDo: React.FC = () => {
     const clubSchedule = "every Friday from 11:00 AM to 12:30 PM"
@@ -56,7 +56,8 @@ const WhatWeDo: React.FC = () => {
                 width: "75%", 
                 margin: "auto", 
                 marginTop: "2rem",
-                fontWeight: "normal"
+                fontWeight: "normal",
+                overflowWrap: "break-word"
             }}>
                 We are always open to exploring new areas of Computer Science, so if you are interested in leading that initiative, come join our <b>club meetings {clubSchedule}</b>. To learn more, email us at <b>{clubEmail}.</b>
             </h3>

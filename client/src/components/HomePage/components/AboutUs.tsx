@@ -2,7 +2,7 @@ import React from 'react'
 
 import "./AboutUs.css"
 
-import img1 from "/public/about-us-1.jpg"
+import img1 from "../../../assets/HomePage/about-us-1.jpg"
 
 const AboutUs: React.FC = () => {
     return (
