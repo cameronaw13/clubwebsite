@@ -2,7 +2,7 @@ import React, { useState, useEffect, createRef } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 
 import "./Menu.css"
-import { MenuIcon } from "../../assets/Header/MenuIcon.tsx";
+import { MenuIcon, MenuIconClose } from "../../assets/Header/MenuIcons.tsx";
 import "../../assets/Header/MenuAssets.css";
 
 const Menu: React.FC<{routes: {name: string, path: string}[]}> = ({routes}) => {
@@ -37,7 +37,12 @@ const Menu: React.FC<{routes: {name: string, path: string}[]}> = ({routes}) => {
   return (
     <div ref={nodeRef}>
       <button className="MenuBtn" onClick={handleMenu}>
-        <MenuIcon open={isMenu}/>
+        <span className="MenuIcon" style={{opacity: isMenu ? 0 : 1}}>
+          <MenuIcon />
+        </span>
+        <span className="MenuIcon" style={{opacity: isMenu ? 1 : 0}}>
+          <MenuIconClose />
+        </span>
       </button>
       <div className="Menu" ref={menuRef} style={{ right: isMenu ? 0 : -width }}>
         <section className="MenuSection">

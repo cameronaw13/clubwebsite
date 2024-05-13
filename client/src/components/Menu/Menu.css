@@ -12,6 +12,13 @@
     z-index: 30;
 }
 
+.MenuIcon {
+    position: absolute;
+    top: 0;
+    height: 40px;
+    transition: opacity ease-out 150ms;
+}
+
 .Menu {
     position: fixed;
     top: 0;

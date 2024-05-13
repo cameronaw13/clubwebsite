@@ -1,10 +1,5 @@
-.assets-MenuIcon {
-    position: absolute;
-    top: 0;
-    height: 40px;
-    
+.assets-MenuIcon {   
     fill: #fff;
     filter: drop-shadow(1px 1px 1px var(--COC-Blue))
             drop-shadow(0px 0px 2px var(--COC-Blue));
-    transition: opacity ease-out 150ms;
 }
